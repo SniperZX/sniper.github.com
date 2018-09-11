@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="欢迎光临">
+<meta name="description" content="#策略模式 定义： 定义了算法族，分别封装起来，让他们之间可以相互替换。此模式可以让算法的变化独立于使用算法的客户  个人理解：一类事物存在着某些易变的行为 ，（比如打人用拳头还是刀，剑），根据设计原则一，把需要变化的地方提取出来，然后进行封装，然后把这种行为提取为一个接口，然后实现不同的行为，可以通过注入的方式，将行为动态的注入到那一类事物中，这样就可以实现行为发生变化，但不影响事物本身的实现。">
 <meta name="keywords" content="SniperZX">
-<meta property="og:type" content="website">
-<meta property="og:title" content="学习小站">
-<meta property="og:url" content="https://sniperzx.github.io/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="策略模式">
+<meta property="og:url" content="https://sniperzx.github.io/2018/09/11/第一篇策略模式/index.html">
 <meta property="og:site_name" content="学习小站">
-<meta property="og:description" content="欢迎光临">
+<meta property="og:description" content="#策略模式 定义： 定义了算法族，分别封装起来，让他们之间可以相互替换。此模式可以让算法的变化独立于使用算法的客户  个人理解：一类事物存在着某些易变的行为 ，（比如打人用拳头还是刀，剑），根据设计原则一，把需要变化的地方提取出来，然后进行封装，然后把这种行为提取为一个接口，然后实现不同的行为，可以通过注入的方式，将行为动态的注入到那一类事物中，这样就可以实现行为发生变化，但不影响事物本身的实现。">
 <meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2018-09-11T09:05:29.371Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习小站">
-<meta name="twitter:description" content="欢迎光临">
+<meta name="twitter:title" content="策略模式">
+<meta name="twitter:description" content="#策略模式 定义： 定义了算法族，分别封装起来，让他们之间可以相互替换。此模式可以让算法的变化独立于使用算法的客户  个人理解：一类事物存在着某些易变的行为 ，（比如打人用拳头还是刀，剑），根据设计原则一，把需要变化的地方提取出来，然后进行封装，然后把这种行为提取为一个接口，然后实现不同的行为，可以通过注入的方式，将行为动态的注入到那一类事物中，这样就可以实现行为发生变化，但不影响事物本身的实现。">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://sniperzx.github.io/"/>
+  <link rel="canonical" href="https://sniperzx.github.io/2018/09/11/第一篇策略模式/"/>
 
 
 
 
 
-  <title>学习小站</title>
+  <title>策略模式 | 学习小站</title>
   
 
 
@@ -144,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -228,9 +228,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -260,9 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/11/第一篇策略模式/" itemprop="url">策略模式</a></h1>
+          <h1 class="post-title" itemprop="name headline">策略模式</h1>
         
 
         <div class="post-meta">
@@ -334,9 +332,7 @@
       
 
       
-        
-          
-            <p>#策略模式</p>
+        <p>#策略模式</p>
 <h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><blockquote>
 <p><strong>定义了算法族，分别封装起来，让他们之间可以相互替换。此模式可以让算法的变化独立于使用算法的客户</strong></p>
 </blockquote>
@@ -350,8 +346,6 @@
 <p><strong>设计原则一：找出应用中需要变化之处，把它们独立出来，不要与那些不需要变化的代码混在一起</strong></p>
 <p>以上均为个人理解，如果错误，欢迎大家指正！！！</p>
 
-          
-        
       
     </div>
     
@@ -368,12 +362,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -383,10 +377,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -394,6 +389,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -414,8 +413,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -466,6 +474,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义："><span class="nav-number">1.</span> <span class="nav-text">定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#个人理解："><span class="nav-number">2.</span> <span class="nav-text">个人理解：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -599,6 +623,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
