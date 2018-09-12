@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="欢迎光临">
+<meta name="description" content="观察者模式典型案例：订报纸subject（出版社） 主题observer（订阅者） 观察者 定义：观察者模式定义了对象之间的一对多依赖，这样一来，当一个对象改变时，所有依赖它的对象都将收到通知并自动更新。 优点：主题和观察者是松耦合。 关于观察者的一切，主题只知道它实现了某个接口（observer接口），主题不需要知道观察者的具体类是谁，做了什么。我们可以在任何时候增加观察者，主题唯一依赖的东西是">
 <meta name="keywords" content="SniperZX">
-<meta property="og:type" content="website">
-<meta property="og:title" content="学习小站">
-<meta property="og:url" content="https://sniperzx.github.io/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="观察者模式">
+<meta property="og:url" content="https://sniperzx.github.io/2018/09/12/第二篇观察者模式/index.html">
 <meta property="og:site_name" content="学习小站">
-<meta property="og:description" content="欢迎光临">
+<meta property="og:description" content="观察者模式典型案例：订报纸subject（出版社） 主题observer（订阅者） 观察者 定义：观察者模式定义了对象之间的一对多依赖，这样一来，当一个对象改变时，所有依赖它的对象都将收到通知并自动更新。 优点：主题和观察者是松耦合。 关于观察者的一切，主题只知道它实现了某个接口（observer接口），主题不需要知道观察者的具体类是谁，做了什么。我们可以在任何时候增加观察者，主题唯一依赖的东西是">
 <meta property="og:locale" content="zh">
+<meta property="og:image" content="http://pcgoqows1.bkt.clouddn.com/20180912110625.png">
+<meta property="og:updated_time" content="2018-09-12T03:37:29.759Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习小站">
-<meta name="twitter:description" content="欢迎光临">
+<meta name="twitter:title" content="观察者模式">
+<meta name="twitter:description" content="观察者模式典型案例：订报纸subject（出版社） 主题observer（订阅者） 观察者 定义：观察者模式定义了对象之间的一对多依赖，这样一来，当一个对象改变时，所有依赖它的对象都将收到通知并自动更新。 优点：主题和观察者是松耦合。 关于观察者的一切，主题只知道它实现了某个接口（observer接口），主题不需要知道观察者的具体类是谁，做了什么。我们可以在任何时候增加观察者，主题唯一依赖的东西是">
+<meta name="twitter:image" content="http://pcgoqows1.bkt.clouddn.com/20180912110625.png">
 
 
 
@@ -119,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://sniperzx.github.io/"/>
+  <link rel="canonical" href="https://sniperzx.github.io/2018/09/12/第二篇观察者模式/"/>
 
 
 
 
 
-  <title>学习小站</title>
+  <title>观察者模式 | 学习小站</title>
   
 
 
@@ -144,8 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -228,9 +230,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -260,9 +262,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/12/第二篇观察者模式/" itemprop="url">观察者模式</a></h1>
+          <h1 class="post-title" itemprop="name headline">观察者模式</h1>
         
 
         <div class="post-meta">
@@ -344,9 +344,7 @@
       
 
       
-        
-          
-            <h2 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h2><h3 id="典型案例：订报纸"><a href="#典型案例：订报纸" class="headerlink" title="典型案例：订报纸"></a>典型案例：订报纸</h3><p>subject（出版社） 主题<br>observer（订阅者） 观察者</p>
+        <h2 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h2><h3 id="典型案例：订报纸"><a href="#典型案例：订报纸" class="headerlink" title="典型案例：订报纸"></a>典型案例：订报纸</h3><p>subject（出版社） 主题<br>observer（订阅者） 观察者</p>
 <h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><p>观察者模式定义了对象之间的<strong><em>一对多</em></strong>依赖，这样一来，当一个对象改变时，所有依赖它的对象都将收到通知并自动更新。</p>
 <h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><p>主题和观察者是松耦合。</p>
 <p>关于观察者的一切，主题只知道它实现了某个接口（observer接口），主题<strong><em>不需要</em></strong>知道观察者的具体类是谁，做了什么。<br>我们可以在任何时候增加观察者，主题<font color="red">唯一</font>依赖的东西是一个实现observer接口的<strong><em>对象列表</em></strong>。</p>
@@ -359,8 +357,6 @@
 <p><strong>‘拉’的好处，可以控制通知的时机，有些不需要通知的变化，可以让观察者无感知。</strong></p>
 <p>JAVA API内置了观察者模式，并且提供了这两种方式。但是内置的Observable类和Observer违反了设计原则：针对接口编程，而不是针对实现编程。</p>
 
-          
-        
       
     </div>
     
@@ -378,177 +374,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sniperzx.github.io/2018/09/11/第一篇策略模式/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SniperZX">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="学习小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/11/第一篇策略模式/" itemprop="url">策略模式</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-11T16:32:30+08:00">
-                2018-09-11
-              </time>
+              <a href="/2018/09/11/第一篇策略模式/" rel="next" title="策略模式">
+                <i class="fa fa-chevron-left"></i> 策略模式
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/设计模式/" itemprop="url" rel="index">
-                    <span itemprop="name">设计模式</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/09/11/第一篇策略模式/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/11/第一篇策略模式/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>#策略模式</p>
-<h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><blockquote>
-<p><strong>定义了算法族，分别封装起来，让他们之间可以相互替换。此模式可以让算法的变化独立于使用算法的客户</strong></p>
-</blockquote>
-<h3 id="个人理解："><a href="#个人理解：" class="headerlink" title="个人理解："></a>个人理解：</h3><p>一类事物存在着某些<em><strong>易变</strong></em>的行为 ，（比如打人用拳头还是刀，剑），根据<strong>设计原则一</strong>，把需要变化的地方提取出来，然后进行封装，然后把这种行为提取为一个接口，然后实现不同的行为，可以通过注入的方式，将行为动态的注入到那一类事物中，这样就可以实现行为发生变化，但不影响事物本身的实现。</p>
-<p>例子：游戏中人物使用的武器就可以使用策略模式。提取出一个武器类，</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">weapon</span></span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">quantou</span> <span class="keyword">extends</span> <span class="title">weapon</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">knife</span> <span class="keyword">extends</span> <span class="title">weapon</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样人物变换武器时不会影响人物本身的变换，人物只用提供一个方法；</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">useWeapon</span><span class="params">(weapon w)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>
-</strong></p>
-<p><strong>设计原则一：找出应用中需要变化之处，把它们独立出来，不要与那些不需要变化的代码混在一起</strong></p>
-<p>以上均为个人理解，如果错误，欢迎大家指正！！！</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -558,10 +405,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -569,6 +417,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -589,8 +444,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -641,6 +505,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#观察者模式"><span class="nav-number">1.</span> <span class="nav-text">观察者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#典型案例：订报纸"><span class="nav-number">1.1.</span> <span class="nav-text">典型案例：订报纸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义："><span class="nav-number">1.2.</span> <span class="nav-text">定义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优点："><span class="nav-number">1.3.</span> <span class="nav-text">优点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类图："><span class="nav-number">1.4.</span> <span class="nav-text">类图：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码："><span class="nav-number">1.5.</span> <span class="nav-text">代码：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#观察者模式的两种方式："><span class="nav-number">1.6.</span> <span class="nav-text">观察者模式的两种方式：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -774,6 +654,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
