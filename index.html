@@ -345,22 +345,15 @@
 
       
         
-          
-            <h2 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h2><h3 id="典型案例：订报纸"><a href="#典型案例：订报纸" class="headerlink" title="典型案例：订报纸"></a>典型案例：订报纸</h3><p>subject（出版社） 主题<br>observer（订阅者） 观察者</p>
+          <h2 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h2><h3 id="典型案例：订报纸"><a href="#典型案例：订报纸" class="headerlink" title="典型案例：订报纸"></a>典型案例：订报纸</h3><p>subject（出版社） 主题<br>observer（订阅者） 观察者</p>
 <h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><p>观察者模式定义了对象之间的<strong><em>一对多</em></strong>依赖，这样一来，当一个对象改变时，所有依赖它的对象都将收到通知并自动更新。</p>
-<p>&lt; !–more–&gt;</p>
-<h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><p>主题和观察者是松耦合。</p>
-<p>关于观察者的一切，主题只知道它实现了某个接口（observer接口），主题<strong><em>不需要</em></strong>知道观察者的具体类是谁，做了什么。<br>我们可以在任何时候增加观察者，主题<font color="red">唯一</font>依赖的东西是一个实现observer接口的<strong><em>对象列表</em></strong>。</p>
-<p>我们可以在运行时修改对象列表，主题不会有任何影响。</p>
-<h3 id="类图："><a href="#类图：" class="headerlink" title="类图："></a>类图：</h3><p><img src="http://pcgoqows1.bkt.clouddn.com/20180912110625.png" alt="观察者类图"></p>
-<h3 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Subject</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">registerObserver</span><span class="params">(Observer o)</span></span>;<span class="comment">//注册</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">removeObserver</span><span class="params">(Observer o)</span></span>;<span class="comment">//移除</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">notifyObservers</span><span class="params">()</span></span>;<span class="comment">//发生改变时通知所有观察者</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>维护的是那个<strong>对象列表</strong>，注册时列表加入Observer，移除时列表删除Observer，<br>通知时，取出所有Observer，然后调用其update（）方法即可。</p>
-<h3 id="观察者模式的两种方式："><a href="#观察者模式的两种方式：" class="headerlink" title="观察者模式的两种方式："></a>观察者模式的两种方式：</h3><p>观察者分别有‘推’和‘拉’两种方式。</p>
-<p>推，当主题发生改变时，主题主动的‘推’给各个观察者。<br>拉，主题提供getter方法以便观察者主动到主题中‘拉’取所需要的状态。</p>
-<p><strong>‘拉’的好处，可以控制通知的时机，有些不需要通知的变化，可以让观察者无感知。</strong></p>
-<p>JAVA API内置了观察者模式，并且提供了这两种方式。但是内置的Observable类和Observer违反了设计原则：针对接口编程，而不是针对实现编程。</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/12/第二篇观察者模式/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -515,7 +508,7 @@
 <h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><blockquote>
 <p><strong>定义了算法族，分别封装起来，让他们之间可以相互替换。此模式可以让算法的变化独立于使用算法的客户</strong></p>
 </blockquote>
-<p>&lt; !–more–&gt;</p>
+<p>&lt; !– more –&gt;</p>
 <h3 id="个人理解："><a href="#个人理解：" class="headerlink" title="个人理解："></a>个人理解：</h3><p>一类事物存在着某些<em><strong>易变</strong></em>的行为 ，（比如打人用拳头还是刀，剑），根据<strong>设计原则一</strong>，把需要变化的地方提取出来，然后进行封装，然后把这种行为提取为一个接口，然后实现不同的行为，可以通过注入的方式，将行为动态的注入到那一类事物中，这样就可以实现行为发生变化，但不影响事物本身的实现。</p>
 <p>例子：游戏中人物使用的武器就可以使用策略模式。提取出一个武器类，</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">weapon</span></span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">quantou</span> <span class="keyword">extends</span> <span class="title">weapon</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">knife</span> <span class="keyword">extends</span> <span class="title">weapon</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
