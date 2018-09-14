@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>https://sniperzx.github.io/2018/09/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2018-09-12T03:47:53.417Z</lastmod>
+    <data>
+        <display>
+        <title>策略模式</title>
+        <pubTime>2018-09-11T08:32:30.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="设计模式" url="https://sniperzx.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://sniperzx.github.io/2018/09/12/%E7%AC%AC%E4%BA%8C%E7%AF%87%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2018-09-12T03:45:50.805Z</lastmod>
+    <data>
+        <display>
+        <title>观察者模式</title>
+        <pubTime>2018-09-12T03:36:47.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="设计模式" url="https://sniperzx.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+</urlset>
